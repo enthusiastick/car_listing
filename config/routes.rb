@@ -2,7 +2,7 @@ CarListing::Application.routes.draw do
 
   resources :cars
 
-  root 'cars#welcome'
+  root 'cars#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,5 @@
+<h1>Car Listing Index</h1>
+<%= link_to 'New Listing', new_car_path %>
+<% @cars.each do |car| %>
+</p><%= link_to car.id, car %>. <%= car.color + ' ' + car.year %></p>
+<% end %>

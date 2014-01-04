@@ -1,0 +1,26 @@
+<h1>New Car Listing</h1>
+
+<%= form_for(@car) do |f| %>
+  <% if @car.errors.any? %>
+    <p>Error(s) detected; inquiry not saved.</p>
+  <% end %>
+    <div>
+      <%= f.label :color %>:
+      <%= f.text_field :color %>
+    </div>
+    <div>
+      <%= f.label :year %>:
+      <%= f.select :year, @options %>
+    </div>
+    <div>
+      <%= f.label :mileage %>:
+      <%= f.text_area :mileage %>
+    </div>
+    <div>
+      <%= f.label :description %>:
+      <%= f.text_field :description %>
+    </div>
+    <div>
+      <%= f.submit "List Car" %>
+    </div>
+<% end %>
